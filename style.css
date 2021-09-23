@@ -15,18 +15,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-   
+
 }
 .container { 
-    display: block;
+    display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    width: 350px;
-    height: 100px;
+    width: 300px;
+    height: 100vh;
     border-radius: 200px;
     font-family: 'Lexend Deca', sans-serif;
-    border: 10px solid black;
 }
 
 
@@ -42,28 +40,27 @@ body {
    color:var(--Very-light-gray);
 }
 
-.content1 { 
+.content1, .content2, .content3 { 
     flex: 1;
     font-size: 15px;
-    background-color: var(--Bright-orange);
     line-height: 2rem;
     color: var(--Transparent-white);
+}
+
+.content1 { 
+    background-color: var(--Bright-orange);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 .content2 { 
-    flex: 1;
-    font-size: 15px;
     background-color: var(--Dark-cyan);
-    line-height: 2rem;
-    color: var(--Transparent-white);
 }
 
 .content3 { 
-    flex: 1;
-    font-size: 15px;
     background-color: var(--Very-dark-cyan);
-    line-height: 2rem;
-    color: var(--Transparent-white);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .buttons { 
@@ -74,3 +71,72 @@ body {
     border-style: none;
     margin-top: 1.5rem;
 }
+
+.buttons:hover { 
+    background-color: transparent;
+    color: var(--Transparent-white);
+    border: 2px solid var(--Transparent-white);
+}
+
+
+
+@media (min-width: 768px) { 
+
+    body { 
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .container { 
+        width: 740px;
+        height: 550px;
+        flex-direction: row;
+    }
+
+    .content1 { 
+        border-top-right-radius: 0px;
+        border-bottom-left-radius:15px;
+    }
+
+    .content3 { 
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 15px;
+    }
+}
+
+@media (min-width: 950px) { 
+    
+    body { 
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container { 
+        width: 900px;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .buttons { 
+        /* margin-top: 50px; */
+    }
+
+    .content1 { 
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 15px;
+    }
+
+    .content3 { 
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 15px;
+    }
+
+}
+
